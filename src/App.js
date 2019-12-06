@@ -1,11 +1,19 @@
 import React from 'react';
 import './App.css';
-import Pallete from './Pallete';
+import Palette from './Palette';
 import seedColors from './seedColors';
 
 function App() {
+
+  const colorCheck = () => {
+    console.log('color check function');
+    console.log(...seedColors);
+  }
   return (
-    <Pallete {...seedColors}></Pallete>
+    <>
+    <Palette palette={seedColors[4]}/>
+    {colorCheck()}
+    </>
   );
 }
 

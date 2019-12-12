@@ -13,7 +13,7 @@ export default function Colorbox(props) {
   const showOverlay = copy ? 'show' : '';
 
   return (
-    <CopyToClipboard text={'hello'} onCopy={handleCopy}>
+    <CopyToClipboard text={props.format} onCopy={handleCopy}>
       <div className="colorbox" style={{backgroundColor: props.background}}>
         <div style={{backgroundColor:props.background}} className={`copy-overlay ${showOverlay}`}></div>
         <div className={`copy-msg ${showOverlay}`}>

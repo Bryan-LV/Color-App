@@ -19,3 +19,8 @@ nav{
   margin-top: 2.5vh;
   display: block;
 }
+
+.slider-container {
+  flex: 1;
+  max-width: 400px;
+}

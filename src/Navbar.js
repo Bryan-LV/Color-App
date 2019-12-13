@@ -23,6 +23,7 @@ export default function Navbar(props) {
   }
 
   return (
+    <header>
     <nav>
       <div className="logo">
         <a href="#" className="logo-brand">React Color Palette</a>
@@ -40,7 +41,8 @@ export default function Navbar(props) {
           <MenuItem value="rgba">RGBA - rgba(255,255,255,1.0)</MenuItem>
         </Select>
       </div>
-      <div className="">
+    </nav>
+    <div className="">
       <Snackbar
         anchorOrigin={{
           vertical: 'bottom',
@@ -64,6 +66,6 @@ export default function Navbar(props) {
         ]}
       />
       </div>
-    </nav>
+    </header>
   )
 }

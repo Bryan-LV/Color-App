@@ -1,0 +1,31 @@
+.home-container{
+  width:85%;
+  margin: auto;
+}
+
+.palettes-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.mini-palette-container{
+  margin:14px;
+  border:1px solid #292929;
+  border-radius: 4px;
+  text-align: center;
+  padding:10px;
+}
+
+.mini-color-info{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mini-color-palette-box{
+  height:35px;
+  width:25%;
+  margin:-2px;
+  padding:0;
+  display: inline-block;
+}

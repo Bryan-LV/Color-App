@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import {Link} from 'react-router-dom'
 import Select from '@material-ui/core/Select'
 import MenuItem from '@material-ui/core/MenuItem'
 import Slider from 'rc-slider'
@@ -26,7 +27,7 @@ export default function Navbar(props) {
     <header>
     <nav>
       <div className="logo">
-        <a href="#" className="logo-brand">React Color Palette</a>
+        <Link to="/" className="logo-brand">React Color Palette</Link>
       </div>
       <div className="slider-container">
         <span>Level: {props.level}</span>

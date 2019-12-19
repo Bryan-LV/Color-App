@@ -21,7 +21,7 @@ export default function Palette(props) {
   // looping through a certain level of colors
   const colors = () => {
     const allColors = props.palette.colors[level].map(color => {
-        return <Colorbox format={color[format]} name={color.name} background={color[format]} singleURL={`/palette/${props.palette.id}/${color.id}`}/>
+        return <Colorbox format={color[format]} name={color.name} background={color[format]} isMore={true} singleURL={`/palette/${props.palette.id}/${color.id}`}/>
     })
     return allColors
   }

@@ -1,8 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import ShadeColorBox from './ShadeColorBox';
+import Colorbox from './Colorbox'
+import './singlePalette.css'
 
 export default function SinglePalette(props) {
   const {palette} = props;
+  const [format, setFormat] = useState('hex');
 
   const findColors = () => {
     // paletteColors is an object full of arrays
@@ -21,15 +24,15 @@ export default function SinglePalette(props) {
 
   const generateColorBoxes = () => {
     const shades = findColors();
-    const colorBoxes = shades.map(shade => <ShadeColorBox color={shade.hex} name={shade.id}/>)
+    const colorBoxes = shades.map(shade => <Colorbox isMore={false} background={shade[format]} name={shade.name}/>)
     return colorBoxes;
   }
+
   return (
     <div className="single-palette-colors">
-      <h1>Singlecolor</h1>
-      <div className="test">
-        {generateColorBoxes()}
-      </div>
+        <div className="single-palette-colors-wrapper">
+          {generateColorBoxes()}
+        </div>
     </div>
   )
 }

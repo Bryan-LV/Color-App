@@ -27,6 +27,10 @@
   text-decoration: none;
 }
 
+.hide-more{
+  display: none;
+}
+
 .copy-btn{
   width:100px;
   height:30px;

@@ -1,5 +1,5 @@
 import React from 'react'
-import './shadeColorbox.css'
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 
 export default function ShadeColorBox(props) {
@@ -7,7 +7,9 @@ export default function ShadeColorBox(props) {
 
   return (
     <div className={`shade-color-box`} style={{backgroundColor: color}}>
-      <span>{name}</span>
+      <CopyToClipboard text={color}>
+        <span>{name}</span>
+      </CopyToClipboard>
     </div>
   )
 }

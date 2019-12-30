@@ -30,7 +30,7 @@ export default function Palette(props) {
 
   return (
     <div className="palette">
-      <Navbar level={level} changeLevel={changeLevel} handleFormat={handleFormat}/>
+      <Navbar level={level} changeLevel={changeLevel} handleFormat={handleFormat}  slider={true}/>
       <div className="palette-colors">{colors()}</div>
       <Footer name={props.palette.paletteName} emoji={props.palette.emoji}/>
     </div>

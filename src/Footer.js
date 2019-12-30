@@ -1,5 +1,6 @@
 import React from 'react'
 import './palette.css'
+import './footer.css'
 
 export default function Footer(props) {
   return (

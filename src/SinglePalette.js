@@ -1,6 +1,9 @@
 import React, {useState} from 'react'
 import ShadeColorBox from './ShadeColorBox';
 import Colorbox from './Colorbox'
+import Navbar from './Navbar';
+import Footer from './Footer';
+import {Link} from 'react-router-dom'
 import './singlePalette.css'
 
 export default function SinglePalette(props) {
@@ -28,11 +31,24 @@ export default function SinglePalette(props) {
     return colorBoxes;
   }
 
+  const handleFormat = (state) => {
+    setFormat(state);
+  }
+
+  const handleBackBtn = () => {
+    // get previous page
+    props.history.goBack();
+    // 
+  }
+
   return (
     <div className="single-palette-colors">
+      <Navbar slider={false} handleFormat={handleFormat}/>
         <div className="single-palette-colors-wrapper">
           {generateColorBoxes()}
+          <div className="go-back"><Link onClick={handleBackBtn}><h2>Go Back</h2></Link></div>
         </div>
+        <Footer name={palette.paletteName} emoji={palette.emoji}/>
     </div>
   )
 }

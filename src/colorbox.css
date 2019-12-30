@@ -1,11 +1,14 @@
 .colorbox{
   width: 25%;
-  height:25%;
-  min-height:150px;
+  min-height: 150px;
   display: inline-block;
   cursor: pointer;
   position: relative;
   margin-bottom:-3.5px;
+}
+
+.single-palette-colors .colorbox {
+  min-height: 28vh;
 }
 
 .colorbox p {
@@ -61,6 +64,10 @@
   font-size: 14px;
 }
 
+.text-white{
+  color:white;
+}
+
 .copy-overlay{
   width:100%;
   height:100%;
@@ -113,7 +120,5 @@
 .copy-msg p {
   font-weight: 100;
   font-size:2rem;
-  color:white;
   padding-top: 15px;
 }
-

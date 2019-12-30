@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import Select from '@material-ui/core/Select'
 import MenuItem from '@material-ui/core/MenuItem'
@@ -12,6 +12,11 @@ import './navbar.css'
 export default function Navbar(props) {
   const [format, setFormat] = useState('hex');
   const [open, setOpen] = useState(false);
+  const [slider, setSlider] = useState(true);
+
+  useEffect(() => {
+    setSlider(props.slider)
+  }, [])
 
   const handleFormatChange = (e) => {
     setFormat(e.target.value);
@@ -23,6 +28,21 @@ export default function Navbar(props) {
     setOpen(false)
   }
 
+  const createSlider = () => {
+    const sliderComponent = <div> 
+                      <span>Level: {props.level}</span>
+                      <div className="slider">
+                        <Slider defaultValue={props.level} min={100} max={900} step={100} onAfterChange={props.changeLevel}/>
+                      </div> 
+                    </div>
+    if(slider){
+      return sliderComponent
+    }
+    else {
+      return null;
+    }
+  }
+
   return (
     <header>
     <nav>
@@ -30,10 +50,7 @@ export default function Navbar(props) {
         <Link to="/" className="logo-brand">React Color Palette</Link>
       </div>
       <div className="slider-container">
-        <span>Level: {props.level}</span>
-        <div className="slider">
-          <Slider defaultValue={props.level} min={100} max={900} step={100} onAfterChange={props.changeLevel}/>
-        </div>
+        {createSlider()}
       </div>
       <div className="select-container">
         <Select value={format} onChange={handleFormatChange}>

@@ -5,3 +5,23 @@
 .single-palette-colors-wrapper{
   height:100%;
 }
+
+.go-back {
+  display: inline-block;
+  background-color: #292929;
+  width: 50%;
+  min-height: 195px;
+  position: relative;
+  top: -149px;
+  text-align: center;
+}
+
+.go-back a {
+  text-decoration: none;
+}
+
+.go-back h2 {
+  color:#fff;
+  position: relative;
+  top: 35px;
+}

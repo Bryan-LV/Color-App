@@ -1,5 +1,9 @@
-.home-nav{
+.home-nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.rc-slider-track {
+  background-color: #616161;
 }

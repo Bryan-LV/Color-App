@@ -1,13 +1,11 @@
-import React, {useState} from 'react'
-import ShadeColorBox from './ShadeColorBox';
-import Colorbox from './Colorbox'
-import Navbar from './Navbar';
-import Footer from './Footer';
-import {Link} from 'react-router-dom'
-import './singlePalette.css'
+import React, { useState } from 'react'
+import Colorbox from './Components/Colorbox'
+import Navbar from './Layout/Navbar';
+import { Link } from 'react-router-dom'
+import Title from './Components/Title';
 
 export default function SinglePalette(props) {
-  const {palette} = props;
+  const { palette } = props;
   const [format, setFormat] = useState('hex');
 
   const findColors = () => {
@@ -17,7 +15,7 @@ export default function SinglePalette(props) {
     const singleColorName = props.match.params.colorId;
     const shades = [];
     // iterate through object, collect every shade of color id and create array
-    for(let key in paletteColors){
+    for (let key in paletteColors) {
       // filter throught each array, find color.id === singleColorName
       const filterColors = paletteColors[key].filter(color => color.id === singleColorName);
       shades.push(...filterColors)
@@ -27,7 +25,7 @@ export default function SinglePalette(props) {
 
   const generateColorBoxes = () => {
     const shades = findColors();
-    const colorBoxes = shades.map(shade => <Colorbox isMore={false} background={shade[format]} name={shade.name}/>)
+    const colorBoxes = shades.map(shade => <Colorbox isMore={false} background={shade[format]} name={shade.name} />)
     return colorBoxes;
   }
 
@@ -42,13 +40,21 @@ export default function SinglePalette(props) {
   }
 
   return (
-    <div className="single-palette-colors">
-      <Navbar slider={false} handleFormat={handleFormat}/>
-        <div className="single-palette-colors-wrapper">
+    <div className="">
+      <Navbar slider={false} handleFormat={handleFormat} />
+      <Title paletteName={palette.paletteName} emoji={palette.emoji} />
+
+      <div className="">
+        <div className="md:grid md:grid-cols-3 gap-2 mx-2">
           {generateColorBoxes()}
-          <div className="go-back"><Link onClick={handleBackBtn}><h2>Go Back</h2></Link></div>
+          <div className="">
+            <Link onClick={handleBackBtn}>
+              <h2 className="bg-gray-800 text-white text-2xl h-full rounded-sm flex flex-col justify-center items-center">Go Back</h2>
+            </Link>
+          </div>
         </div>
-        <Footer name={palette.paletteName} emoji={palette.emoji}/>
+      </div>
+
     </div>
   )
 }

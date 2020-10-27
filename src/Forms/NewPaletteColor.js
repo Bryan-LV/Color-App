@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ChromePicker } from 'react-color';
 import { Link } from 'react-router-dom';
 import checkLum from '../Utils/checkLuminosity';
@@ -70,7 +70,7 @@ export default function NewPaletteColor(props) {
         <div className="flex flex-col justify-between items-center">
           <button className="block mt-2 bg-teal-400 text-white py-2 px-8 rounded-sm" onClick={handleSavePalette}>Save Palette</button>
           <button className="block my-2 text-sm text-gray-600" onClick={handleClearPalette}> Clear Palette </button>
-          <Link to="/" className="text-xl mb-2"><svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"></path></svg></Link>
+          <Link to="/" className="text-xl mb-2"><svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"></path></svg></Link>
         </div>
       </div>
     </div>

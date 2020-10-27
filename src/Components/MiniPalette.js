@@ -5,7 +5,7 @@ export default function MiniPalette(props) {
   const { name, emoji, colors, id } = props;
 
   const createMiniPalette = () => {
-    return colors.map(color => <div className="h-6 w-full" style={{ backgroundColor: color.color }}></div>)
+    return colors.map(color => <div key={color.color} className="h-6 w-full" style={{ backgroundColor: color.color }}></div>)
   }
   return (
     <div className="h-56 w-full max-w-xs rounded-sm shadow-sm mx-auto">

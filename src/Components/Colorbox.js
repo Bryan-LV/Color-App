@@ -20,7 +20,8 @@ export default function Colorbox(props) {
     // check props if isMore is true or false
     // used to check if color palette is rendering full color palettes or a single color shade palette
     setIsMore(props.isMore);
-  }, [])
+    console.log('re-render');
+  }, [props.isMore])
 
   const handleCopy = () => {
     setCopy(true);

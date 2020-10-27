@@ -17,7 +17,7 @@ export default function Navbar(props) {
 
   useEffect(() => {
     setSlider(props.slider)
-  }, [])
+  }, [props.slider])
 
   const handleFormatChange = (e) => {
     setFormat(e.target.value);

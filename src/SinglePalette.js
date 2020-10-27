@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Colorbox from './Components/Colorbox'
 import Navbar from './Layout/Navbar';
-import { Link } from 'react-router-dom'
 import Title from './Components/Title';
 
 export default function SinglePalette(props) {
@@ -25,7 +24,7 @@ export default function SinglePalette(props) {
 
   const generateColorBoxes = () => {
     const shades = findColors();
-    const colorBoxes = shades.map(shade => <Colorbox isMore={false} background={shade[format]} name={shade.name} />)
+    const colorBoxes = shades.map(shade => <Colorbox key={shade[format]} isMore={false} background={shade[format]} name={shade.name} />)
     return colorBoxes;
   }
 
@@ -48,9 +47,9 @@ export default function SinglePalette(props) {
         <div className="md:grid md:grid-cols-3 gap-2 mx-2">
           {generateColorBoxes()}
           <div className="">
-            <Link onClick={handleBackBtn}>
+            <button onClick={handleBackBtn}>
               <h2 className="bg-gray-800 text-white text-2xl h-48 rounded-sm flex flex-col justify-center items-center">Go Back</h2>
-            </Link>
+            </button>
           </div>
         </div>
       </div>

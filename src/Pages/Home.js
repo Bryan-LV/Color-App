@@ -7,7 +7,7 @@ export default function Home(props) {
   const { palettes } = props;
 
   const createMiniPalettes = () => {
-    return palettes.map(palette => <MiniPalette name={palette.paletteName} emoji={palette.emoji} colors={palette.colors} id={palette.id} />)
+    return palettes.map(palette => <MiniPalette name={palette.paletteName} emoji={palette.emoji} colors={palette.colors} id={palette.id} key={palette.id} />)
   }
 
   return (

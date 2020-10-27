@@ -45,18 +45,18 @@ export default function Navbar(props) {
   }
 
   return (
-    <header className="py-4 px-10">
-      <nav>
+    <header className="pt-20 pb-4 md:py-4 px-10">
+      <nav className="flex flex-col justify-center items-center md:flex-row md:justify-between md:items-start">
         <div className="">
           <Link to="/" className="flex flex-row items-start block">
             <img className="h-12 w-12 block" src={monster} alt="" />
             <h1 className="text-3xl">Spiral</h1>
           </Link>
         </div>
-        <div className="slider-container">
+        <div className="slider-container py-2 md:py-0 mx-2 w-11/12">
           {createSlider()}
         </div>
-        <div className="select-container">
+        <div className="select-container mb-6 md:pb-0">
           <Select value={format} onChange={handleFormatChange}>
             <MenuItem value="hex">HEX - #FFFFFF</MenuItem>
             <MenuItem value="rgb">RGB - rgb(255,255,255)</MenuItem>

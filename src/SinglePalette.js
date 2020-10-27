@@ -49,7 +49,7 @@ export default function SinglePalette(props) {
           {generateColorBoxes()}
           <div className="">
             <Link onClick={handleBackBtn}>
-              <h2 className="bg-gray-800 text-white text-2xl h-full rounded-sm flex flex-col justify-center items-center">Go Back</h2>
+              <h2 className="bg-gray-800 text-white text-2xl h-48 rounded-sm flex flex-col justify-center items-center">Go Back</h2>
             </Link>
           </div>
         </div>

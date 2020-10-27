@@ -51,12 +51,12 @@ function NewPalette(props) {
 
       <div className="col-span-3">
         {editNameInput ?
-          (<div className="flex-center mx-2 my-1">
+          (<div className="flex-center mx-2 my-2">
             <input className="w-full border-gray-200 border-2 p-2 tracking-wide rounded-md" type="text" value={paletteColorName} onKeyUp={handleEnterPress} onChange={({ target }) => setPaletteColorName(target.value)} />
             <button className="mx-1" onClick={editPaletteName}><svg className="w-6 h-6" data-darkreader-inline-fill="" data-darkreader-inline-stroke="" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></button>
           </div>)
           : (
-            <div className="flex-between-center mx-2">
+            <div className="flex-center mx-2 my-2">
               <h1 className="text-lg md:text-xl text-center py-3 tracking-wide">{paletteColorName}</h1>
               <button className="mx-1" onClick={editPaletteName}><svg className="w-6 h-6" data-darkreader-inline-fill="" data-darkreader-inline-stroke="" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg></button>
             </div>

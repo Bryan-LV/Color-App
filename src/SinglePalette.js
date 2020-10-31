@@ -47,7 +47,7 @@ export default function SinglePalette(props) {
         <div className="md:grid md:grid-cols-3 gap-2 mx-2">
           {generateColorBoxes()}
           <div className="">
-            <button onClick={handleBackBtn}>
+            <button onClick={handleBackBtn} className="w-full">
               <h2 className="bg-gray-800 text-white text-2xl h-48 rounded-sm flex flex-col justify-center items-center">Go Back</h2>
             </button>
           </div>

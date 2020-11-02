@@ -1,26 +1,16 @@
 import React, { useState, useEffect } from 'react'
-import '../colorbox.css'
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { Link } from 'react-router-dom'
 import checkLum from '../Utils/checkLuminosity';
+import '../Styles/colorbox.css'
 
 export default function Colorbox(props) {
   const [copy, setCopy] = useState(false);
   const [isMore, setIsMore] = useState(true);
 
-  // ***** PROPS ******
-  // background
-  // format
-  // singleURL
-  // name
-  // isMore
-  // ******************//
-
   useEffect(() => {
-    // check props if isMore is true or false
     // used to check if color palette is rendering full color palettes or a single color shade palette
     setIsMore(props.isMore);
-    console.log('re-render');
   }, [props.isMore])
 
   const handleCopy = () => {

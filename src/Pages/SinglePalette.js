@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import Colorbox from './Components/Colorbox'
-import Navbar from './Layout/Navbar';
-import Title from './Components/Title';
+import Navbar from '../Layout/Navbar';
+import Colorbox from '../Components/Colorbox'
+import Title from '../Components/Title';
 
 export default function SinglePalette(props) {
   const { palette } = props;

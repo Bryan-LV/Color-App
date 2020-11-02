@@ -6,9 +6,8 @@ import Slider from 'rc-slider'
 import Snackbar from '@material-ui/core/Snackbar';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
-import 'rc-slider/assets/index.css'
-import '../navbar.css'
 import monster from '../Assets/monster.svg'
+import 'rc-slider/assets/index.css'
 
 export default function Navbar(props) {
   const [format, setFormat] = useState('hex');
@@ -53,10 +52,10 @@ export default function Navbar(props) {
             <h1 className="text-3xl">Spiral</h1>
           </Link>
         </div>
-        <div className="slider-container py-2 md:py-0 mx-2 w-11/12">
+        <div className="max-w-sm flex-1 py-2 md:py-0 mx-2 w-11/12">
           {createSlider()}
         </div>
-        <div className="select-container mb-6 md:pb-0">
+        <div className="mb-6 md:pb-0">
           <Select value={format} onChange={handleFormatChange}>
             <MenuItem value="hex">HEX - #FFFFFF</MenuItem>
             <MenuItem value="rgb">RGB - rgb(255,255,255)</MenuItem>

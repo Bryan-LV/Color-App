@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Palette from './Pages/Palette';
 import Home from './Pages/Home';
 import NewPalette from './Pages/NewPalette'
-import SinglePalette from './SinglePalette';
+import SinglePalette from './Pages/SinglePalette';
 import seedColors from './Utils/seedColors';
 import { Route, Switch } from 'react-router-dom';
 import { generatePalette } from './Utils/colorHelpers';
